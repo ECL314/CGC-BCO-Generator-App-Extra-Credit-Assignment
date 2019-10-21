@@ -1,0 +1,84 @@
+{
+  "bco_spec_version": "https://w3id.org/biocompute/1.3.0/",
+  "bco_id": "http://biocompute.sbgenomics.com/bco/55aacbeb-d32c-4e6b-834a-5894b7ab5b49",
+  "checksum": "848a549c38779185839063da1255b3cfeebc8af2e4a4e57b602b06ff1ccab071",
+  "provenance_domain": {
+    "name": "TopHat2",
+    "version": "1.0.0",
+    "review": [],
+    "derived_from": "https://cgc-api.sbgenomics.com/v2/apps/Dennis/el-bco-zip/tophat2/0/raw/",
+    "obsolete_after": "2019-10-21T00:00:00+0000",
+    "embargo": ["2019-10-21T00:00:00+0000", "2019-10-21T00:00:00+0000"],
+    "created": "2019-10-21T00:00:00+0000",
+    "modified": "2019-10-21T00:00:00+0000",
+    "contributors": [],
+    "license": "https://spdx.org/licenses/CC-BY-4.0.html"
+  },
+  "usability_domain": "## TopHat2 (version 2.1.1)\n\n[TopHat2](https://ccb.jhu.edu/software/tophat/manual.shtml) is a program that aligns RNA-Seq reads to a genome in order to identify exon-exon splice junctions. It is built on the ultrafast short read mapping program [Bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).\n\nTopHat2 can also align reads directly to a transcriptome. If provided with annotation of known transcripts, TopHat2 constructs a virtual transcriptome and uses Bowtie2 to align reads to this reference first. Reads that do not align to the transcriptome are then mapped on the reference genome. The reads that did align on the transcriptome will be converted to genomic mappings (spliced as needed) and merged with the novel mappings and junctions in the final output.\n\nThis version of TopHat only accepts reads in FASTQ format. It is optimized for reads that are at least 75bp long.\n\n**Common issues:**\nOne of the most common issues when running TopHat is incompatibility between reference genome and annotations. Please, make sure that you are using compatible FASTA (from which you have created tar bundle with index files) and GTF files in order to run tasks successfully. If you suspect your task has failed due to this incompatibility, you can check the last line in `job.err.log` file which would look as following if your assumptions are correct: `Error: Couldn't build bowtie index with err = 1`.\n\n**Q&A:**\n\n***Q: What should I do if I already have Bowtie2 index files, not archived as tar bundle?***\n\n***A***: You can provide your *.bt2 files to [SBG Compressor](https://igor.sbgenomics.com/public/apps#admin/sbg-public-data/sbg-compressor-1-0/) app from our public apps and set \"TAR\" as your output format. After the task is finished, **you should assign common prefix of the index files to the `Reference genome` metadata field** and your TAR is ready for use.\n\n***Example:***\nIndexed files: chr20.1.bt2, chr20.2.bt2, chr20.3.bt2, chr20.4.bt2, chr20.rev.1.bt2, chr20.rev.2.bt2\n\nMetadata - `Reference genome`: **chr20**\n\n__Important note: In case of paired-end alignment it is crucial to set metadata 'paired-end' field to 1/2. Sequences specified as mate 1s must correspond file-for-file and read-for-read with those specified for mate 2s. Reads may be a mix of different lengths. In case of unpaired reads, the same metadata field should be set to '-'. Only one type of alignment can be performed at once, so all specified reads should be either paired or unpaired.__",
+  "extension_domain": {
+    "fhir_extension": {
+      "fhir_endpoint": "",
+      "fhir_version": "",
+      "fhir_resources": {}
+    },
+    "scm_extension": {
+      "scm_repository": "",
+      "scm_type": "git",
+      "scm_commit": "",
+      "scm_path": "",
+      "scm_preview": ""
+    }
+  },
+  "description_domain": {
+    "keywords": [],
+    "xref": [],
+    "platform": "Seven Bridges Platform",
+    "pipeline_steps": [
+      {
+        "step_number": "",
+        "name": "",
+        "description": "",
+        "version": "",
+        "prerequisite": [],
+        "input_list": [],
+        "output_list": []
+      }
+    ]
+  },
+  "execution_domain": {
+    "script": "https://cgc-api.sbgenomics.com/v2/apps/Dennis/el-bco-zip/tophat2/0/raw/",
+    "script_driver": "Seven Bridges Common Workflow Language Executor",
+    "software_prerequisites": [],
+    "external_data_endpoints": [],
+    "environment_variables": []
+  },
+  "parametric_domain": [],
+  "io_domain": {
+    "input_subdomain": [
+      {
+        "uri": [
+          {
+            "filename": "",
+            "uri": "",
+            "access_time": ""
+          }
+        ]
+      }
+    ],
+    "output_subdomain": [
+      {
+        "mediatype": "",
+        "uri": [
+          {
+            "uri": "",
+            "access_time": ""
+          }
+        ]
+      }
+    ]
+  },
+  "error_domain": {
+    "empirical_error": [],
+    "algorithmic_error": []
+  }
+}
