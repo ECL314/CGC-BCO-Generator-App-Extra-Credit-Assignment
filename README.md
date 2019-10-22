@@ -1,6 +1,6 @@
 # CGC-BCO-Generator-App-Extra-Credit-Assignment
 
-This GitHub repository contains two BCO's that were generated using the new BioCompute Object (BCO) Composer app on the Cancer Genomics Cloud (CGC) powered by Seven Bridges.  (https://cgc-accounts.sbgenomics.com/) 
+This GitHub repository contains two BCO's that were generated using the new BioCompute Object (BCO) Composer app on the Cancer Genomics Cloud (CGC) powered by Seven Bridges (https://cgc-accounts.sbgenomics.com/). 
 
 The BCO Composer app, which uses the R Studio portal on the CGC, enables users to create a BCO from one of the many workflows from the CGC Public Apps Gallery or from a run task.  The benefit of using the BCO Composer app is that stored information (e.g. workflow description & execution steps), written in Common Workflow Language (CWL), is automatically extracted and populated in the respective BCO fields. 
 
