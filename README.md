@@ -6,4 +6,4 @@ The BCO Composer app, which uses the R Studio portal on the CGC, enables users t
 
 In this GitHub repository, the tophat2_2019_10_21_23_59_18.bco.json BCO was created from the CGC public app TopHat2.  (This BCO contains only the information that was automatically extracted and written to the appropriate BCO fields by the BCO Composer app.)  
 
-The rna-seq-alignment-tophat_2019_10_22_05_03_50.bco.json BCO was created from the CGC workflow RNASeq Alignment- TopHat.  (In addition to the information that was automatically extracted and written to the appropriate BCO fields by the BCO Composer app, this BCO also contains information that was manually entered into the BCO fields that could not be filled by the information parsed from CWL.)
+The rna-seq-alignment-tophat_2019_10_22_05_03_50.bco.json BCO was created from the CGC workflow RNASeq Alignment- TopHat.  (In addition to the information that was automatically extracted and written to the appropriate BCO fields by the BCO Composer app, this BCO also contains information that was manually entered into unpopulated BCO fields, which could not be filled by the information parsed from CWL.)
