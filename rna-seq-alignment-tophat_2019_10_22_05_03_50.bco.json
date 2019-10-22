@@ -275,20 +275,20 @@
       {
         "uri": [
           {
-            "filename": "",
-            "uri": "",
-            "access_time": ""
+            "filename": "RNA-Seq read sequence",
+            "uri": "http://example.com/RNASeqdata.fastq",
+            "access_time": "2019-10-22"
           }
         ]
       }
     ],
     "output_subdomain": [
       {
-        "mediatype": "",
+        "mediatype": "text/csv",
         "uri": [
           {
-            "uri": "",
-            "access_time": ""
+            "uri": "http://example.com/alignment_summary.txt",
+            "access_time": "2019-10-22"
           }
         ]
       }
